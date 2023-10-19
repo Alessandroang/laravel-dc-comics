@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('main-content')
-  <section class="container mt-5">
-    <h1>{{ $title }}</h1>
-    
+<div class="container">
+  <h1 class="mt-4">Dettagli dei Fumetti</h1>
+
   <table class="table table-bordered mt-4">
     <thead>
       <tr>
@@ -17,19 +17,18 @@
     </thead>
     <tbody>
       @foreach ($comics as $comic)
-        {{-- <tr>
+        <tr>
           <td><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" style="width: 100px;"></td>
-          <td>{{ $comic->title }}<br>
-            Trama: 
+          <td><strong>{{ $comic->title }}</strong><br>
+            <strong>Trama:</strong> 
           {{$comic->description}}</td>
           <td>{{ $comic->price }}</td>
           <td>{{ $comic->series }}</td>
           <td>{{ $comic->sale_date }}</td>
           <td>{{ $comic->type }}</td>
-        </tr> --}}
+        </tr>
       @endforeach
     </tbody>
   </table>
-  </div>
-</section>
+</div>
 @endsection
