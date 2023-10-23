@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('thumb')->nullable();
             $table->string('price', 8, 2);
             $table->string('series');
-            $table->date('sale_date');
+            $table->date('sale_date')->nullable();
             $table->string('type');
             // $table->json('artists');
             // $table->json('writers');
