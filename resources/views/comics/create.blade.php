@@ -27,59 +27,47 @@
                 <input type="text" name="title" id="title"
                     class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}">
                 @error('title')
-                    <div class="invalid-feedback">{{ $message }}</div>
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="col-3">
                 <label for="price">Prezzo</label>
-                <input type="text" name="price" id="price"
-                    class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
-                @error('price')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="text" name="price" id="price" class="form-control" value="{{ old('price') }}">
+
             </div>
 
             <div class="col-3">
                 <label for="series">Serie</label>
-                <input type="text" name="series" id="series"
-                    class="form-control @error('series') is-invalid @enderror" value="{{ old('series') }}">
-                @error('series')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="text" name="series" id="series" class="form-control" value="{{ old('series') }}">
+
             </div>
 
             <div class="col-3">
                 <label for="sale_date">Data di Creazione</label>
-                <input type="date" name="sale_date" id="sale_date"
-                    class="form-control @error('sale_date') is-invalid @enderror" value="{{ old('sale_date') }}">
-                @error('sale_date')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="date" name="sale_date" id="sale_date" class="form-control" value="{{ old('sale_date') }}">
+
             </div>
 
             <div class="col-3">
                 <label for="type">Tipo</label>
-                <input type="text" name="type" id="type" class="form-control @error('type') is-invalid @enderror"
-                    value="{{ old('type') }}">
-                @error('type')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="text" name="type" id="type" class="form-control" value="{{ old('type') }}">
+
             </div>
 
             <div class="col-12">
                 <p>Inserisci qui l'immagine del tuo fumetto</p>
-                <input type="file" name="image" id="image"
-                    class="form-control @error('image') is-invalid @enderror">
-                @error('image')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="file" name="image" id="image" class="form-control">
+
             </div>
 
             <div class="col-12">
                 <label for="description">Descrizione</label>
                 <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror"
                     rows="4">{{ old('description') }}</textarea>
+                @error('description')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="col-12">
